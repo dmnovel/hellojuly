@@ -564,6 +564,7 @@ document.addEventListener('click',function(e){
     });
   }
   function openModal(){
+    try{if(window.gtag)window.gtag('event','pointback_open',{page_title:document.title});}catch(err){}
     lastFocus=document.activeElement;
     highlightToday();
     backdrop.classList.add('open');
